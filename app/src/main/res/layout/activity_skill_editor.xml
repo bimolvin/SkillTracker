@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/skill_editor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".editor.SkillEditorActivity">
+
+    <!--BACKGROUND-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/foaming_bubble_left"
+        android:contentDescription="@string/background_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="-15dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/foaming_bubble_right"
+        android:contentDescription="@string/background_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="-15dp"/>
+
+    <!--BODY-->
+    <LinearLayout
+        android:id="@+id/linearLayout_editor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="36dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/editor_button_back"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:contentDescription="@string/icon_back"
+            app:icon="@drawable/arrow_back"
+            app:iconSize="34dp"
+            app:iconTint="@color/white"/>
+
+        <!--TITLE-->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/editor_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/editor_title"
+            android:breakStrategy="simple"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="62sp"
+            android:layout_marginBottom="48dp"
+            app:fontFamily="@font/lexend_deca_bold"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/add_skill_name_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="@string/skill_name_edit_text"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_skill_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                app:fontFamily="@font/lexend_deca"
+                android:background="@drawable/text_field_style"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/add_skill_description_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="@string/skill_description_edit_text"
+            android:paddingTop="8dp"
+            android:paddingBottom="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_skill_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                app:fontFamily="@font/lexend_deca"
+                android:background="@drawable/text_field_style"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/skill_level_label"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:text="@string/skill_level_label"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                app:fontFamily="@font/lexend_deca" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/add_skill_level"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:text="@string/skill_level_default"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                app:fontFamily="@font/lexend_deca" />
+        </LinearLayout>
+
+        <!-- Continuous slider -->
+        <com.google.android.material.slider.Slider
+            android:id="@+id/add_skill_slider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:value="0.0"
+            android:valueFrom="0.0"
+            android:valueTo="100.0"
+            app:thumbColor="@color/purple_700"
+            app:trackColorActive="@color/purple_700"
+            app:trackColorInactive="@color/white"
+            app:trackHeight="6dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/add_skill_notes_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="@string/skill_notes_edit_text"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_skill_notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minLines="4"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                app:fontFamily="@font/lexend_deca"
+                android:background="@drawable/text_field_style"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <android.widget.Button
+            android:id="@+id/done_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="48dp"
+            android:paddingVertical="16dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/gradient_button"
+            android:text="@string/done_button_text"
+            android:textSize="26sp"
+            android:textAllCaps="false"
+            android:shadowColor="@color/pink_glow"
+            android:shadowDx="0"
+            android:shadowDy="-1"
+            android:shadowRadius="1"
+            app:fontFamily="@font/lexend_deca" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="false">
+        <layer-list>
+            <!-- GLOW -->
+            <item>
+                <shape>
+                    <solid android:color="@color/pink_glow"/>
+                    <corners android:bottomLeftRadius="11dip"
+                        android:topRightRadius="12dip"
+                        android:topLeftRadius="13dip"
+                        android:bottomRightRadius="12dip"
+                        />
+                </shape>
+            </item>
+            <!-- GRADIENT -->
+            <item android:left="3px" android:bottom="2px">
+                <shape>
+                    <gradient
+                        android:type="linear"
+                        android:angle="0"
+                        android:startColor="#B96184"
+                        android:endColor="#B67455" />
+                    <corners android:bottomLeftRadius="12dip"
+                        android:topRightRadius="12dip"
+                        android:topLeftRadius="12dip"
+                        android:bottomRightRadius="12dip"
+                        />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>
+

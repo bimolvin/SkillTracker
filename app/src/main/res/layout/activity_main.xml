@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    tools:context=".MainActivity"
+    android:background="?attr/colorSurface"
+    android:orientation="vertical">
+
+    <!--BACKGROUND-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/abstract_soap_bubble"
+        android:contentDescription="@string/background_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="-15dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/abstract_soap_bubble_bottom"
+        android:contentDescription="@string/background_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="-18dp"/>
+
+    <!--BODY-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:text="@string/main_title"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="68sp"
+            app:fontFamily="@font/lexend_deca_bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:paddingHorizontal="30dp"
+            android:paddingVertical="15dp"
+            android:text="@string/left_swipe_hint"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="16sp"
+            app:fontFamily="@font/lexend_deca" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:paddingHorizontal="30dp"
+            android:paddingVertical="20dp"
+            android:text="@string/right_swipe_hint"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="16sp"
+            app:fontFamily="@font/lexend_deca" />
+
+        <Button
+            android:id="@+id/display_mode"
+            style="@style/Widget.Material3.Button.TextButton.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sort_label"
+            android:textSize="16sp"
+            app:fontFamily="@font/lexend_deca"
+            app:icon="@drawable/swap_vert"
+            app:iconPadding="4dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:layoutManager="LinearLayoutManager"
+            tools:listitem="@layout/recyclerview_item" />
+    </LinearLayout>
+
+    <!--NEW SKILL BUTTON-->
+    <android.widget.Button
+        android:id="@+id/button_new_skill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/button_plus_description"
+        android:background="@drawable/pink_square_with_plus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="21dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

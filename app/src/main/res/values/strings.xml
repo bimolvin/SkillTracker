@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">SkillTracker</string>
+
+    <string name="main_title">your skills</string>
+    <string name="left_swipe_hint">left swipe to delete</string>
+    <string name="right_swipe_hint">right swipe to edit</string>
+
+    <string name="skill_title">C++</string>
+    <string name="skill_description">High-performance programming language</string>
+    <string name="note_label">Notes:</string>
+    <string name="note">Nothing works(</string>
+    <string name="note_empty">No notes.</string>
+    <string name="status_label">"Skill level: "</string>
+    <string name="status">Advanced</string>
+    <string name="progress_value">%1$d%%</string>
+    <string name="date_label">"Edited last time: "</string>
+    <string name="date">22.12.2024</string>
+    <string name="sort_label">sort</string>
+
+    <string name="icon_back">back</string>
+    <string name="button_plus_description">New Skill</string>
+    <string name="editor_title">skill editor</string>
+    <string name="skill_name_edit_text">Name</string>
+    <string name="skill_description_edit_text">Description</string>
+    <string name="skill_level_label">"Skill Level, %: "</string>
+    <string name="skill_level_default">0</string>
+    <string name="skill_notes_edit_text">Personal Notes</string>
+    <string name="done_button_text">Done</string>
+
+    <string name="message_add_error">"Error: couldn't add data"</string>
+    <string name="message_fill_title">The \"Skill Name\" field must be filled in</string>
+    <string name="message_fill_description">The \"Skill Description\" field must be filled in</string>
+    <string name="message_update_error">"Error: couldn't update data"</string>
+    <string name="message_delete_error">"Error: couldn't delete data"</string>
+
+    <string name="level_beginner">Beginner</string>
+    <string name="level_intermediate">Intermediate</string>
+    <string name="level_advanced">Advanced</string>
+    <string name="level_expert">Expert</string>
+    <string name="level_unknown">Unknown</string>
+
+    <string name="background_description">background bubble</string>
+</resources>

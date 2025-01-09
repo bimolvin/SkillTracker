@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".skillDetail.SkillDetailActivity">
+
+    <!--BACKGROUND-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/light_circle"
+        android:contentDescription="@string/background_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="-15dp"/>
+
+    <!--BODY-->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="36dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_back"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:contentDescription="@string/icon_back"
+            app:icon="@drawable/arrow_back"
+            app:iconSize="34dp"
+            app:iconTint="@color/white"/>
+
+        <!--TITLE-->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/skill_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/skill_title"
+            android:breakStrategy="simple"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="76sp"
+            app:fontFamily="@font/lexend_deca_bold"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/skill_description"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:lineSpacingMultiplier="0.8"
+            android:text="@string/skill_description"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:paddingHorizontal="45dp"
+            android:gravity="center"
+            app:fontFamily="@font/lexend_deca" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="36dp"
+            android:gravity="end">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/status_label"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:text="@string/status_label"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:fontFamily="@font/lexend_deca" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/status"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:text="@string/status"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                app:fontFamily="@font/lexend_deca" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="180dp"
+            android:layout_marginBottom="24dp">
+
+            <ProgressBar
+                android:id="@+id/pBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="100"
+                android:minWidth="200dp"
+                android:minHeight="50dp"
+                android:progress="50"
+                android:scaleY="1.3"
+                android:progressBackgroundTint="@color/white"
+                android:progressBackgroundTintMode="add" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/progress"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:gravity="center"
+                android:minHeight="50dp"
+                android:text="@string/progress_value"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                app:fontFamily="@font/lexend_deca" />
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/skill_note_label"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:lineSpacingMultiplier="0.8"
+            android:text="@string/note_label"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            app:fontFamily="@font/lexend_deca_bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/skill_note"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:lineSpacingMultiplier="0.8"
+            android:text="@string/note"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            app:fontFamily="@font/lexend_deca" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

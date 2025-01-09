@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="?attr/materialCardViewFilledStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical"
+    app:cardBackgroundColor="?attr/colorSurfaceVariant"
+    app:cardCornerRadius="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_card"
+        android:orientation="vertical"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="28dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/card_title"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:lineSpacingMultiplier="0.8"
+            android:text="@string/skill_title"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/lexend_deca_bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/description"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:lineSpacingMultiplier="0.8"
+            android:text="@string/skill_description"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:fontFamily="@font/lexend_deca" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/date_label"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:text="@string/date_label"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:fontFamily="@font/lexend_deca" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/date"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:text="@string/date"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:fontFamily="@font/lexend_deca" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
